@@ -15,10 +15,10 @@ export default function SliderBanner() {
   return (
     <Slider {...settings}>
       <div>
-        <img src="/images/banner1.jpg" alt="Banner 1" />
+        <img src="assets/images/banner1.jpg" alt="Banner 1" />
       </div>
       <div>
-        <img src="/images/banner2.jpg" alt="Banner 2" />
+        <img src="assets/images/banner2.jpg" alt="Banner 2" />
       </div>
     </Slider>
   );
