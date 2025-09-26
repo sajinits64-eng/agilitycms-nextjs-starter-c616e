@@ -1,15 +1,23 @@
 import MainTemplate from "./MainTemplate";
+import Home from "./home";
+import About from "./about";
+import Contact from "./contact";
+import Services from "./services";
 
-// All of the Agility Page Template Components that are in use in this site need to be imported into this index file.
-// Place Page Templates in allTemplates array below, passing in a name and the component.
+// Add all the new page components below
+const allTemplates = [
+  { name: "MainTemplate", template: MainTemplate },
+  { name: "Home", template: Home },
+  { name: "About", template: About },
+  { name: "Contact", template: Contact },
+  { name: "Services", template: Services },
+];
 
-const allTemplates = [{ name: "MainTemplate", template: MainTemplate }];
-
-export const getPageTemplate = (templateName:string) => {
-	if (!templateName) return null;
-	const obj = allTemplates.find(
-		(m) => m.name.toLowerCase() === templateName.toLowerCase()
-	);
-	if (!obj) return null;
-	return obj?.template;
+export const getPageTemplate = (templateName: string) => {
+  if (!templateName) return null;
+  const obj = allTemplates.find(
+    (m) => m.name.toLowerCase() === templateName.toLowerCase()
+  );
+  if (!obj) return null;
+  return obj.template;
 };
